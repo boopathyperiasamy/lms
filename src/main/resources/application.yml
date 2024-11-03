@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Library Management System
+
+server:
+  port : 8081
+
+resilience4j:
+  ratelimiter:
+    instances:
+      library-service:
+        limit-for-period: 10
+        limit-refresh-period: 5s
